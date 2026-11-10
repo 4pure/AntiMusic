@@ -11,6 +11,9 @@
 		01706C982B24EC0D00E54231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01706C972B24EC0D00E54231 /* ViewController.swift */; };
 		01AC15912B23B6F700920888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC15902B23B6F700920888 /* AppDelegate.swift */; };
 		01AC15932B23C7FA00920888 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AC15922B23C7FA00920888 /* MainMenu.xib */; };
+		A10000012B90000100E54231 /* MusicPlayerPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000002B90000100E54231 /* MusicPlayerPreset.swift */; };
+		A10000032B90000100E54231 /* MediaRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000022B90000100E54231 /* MediaRemoteService.swift */; };
+		A10000072B90000100E54231 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000062B90000100E54231 /* StatusItemController.swift */; };
 		C74B66BA2AF1661100F8A72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74B66B92AF1661100F8A72D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -19,6 +22,10 @@
 		01706C972B24EC0D00E54231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01AC15902B23B6F700920888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01AC15922B23C7FA00920888 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		A10000002B90000100E54231 /* MusicPlayerPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPreset.swift; sourceTree = "<group>"; };
+		A10000022B90000100E54231 /* MediaRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRemoteService.swift; sourceTree = "<group>"; };
+		A10000062B90000100E54231 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F607182930A001 /* Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Version.xcconfig; sourceTree = "<group>"; };
 		C74B66B32AF1661000F8A72D /* AntiMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74B66B92AF1661100F8A72D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -34,9 +41,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1B2C3D4E5F607182930A002 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A1B2C3D4E5F607182930A001 /* Version.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		C74B66AA2AF1661000F8A72D = {
 			isa = PBXGroup;
 			children = (
+				A1B2C3D4E5F607182930A002 /* Config */,
 				01706C952B24EA8500E54231 /* icon_512x512.png */,
 				C74B66B52AF1661000F8A72D /* AntiMusic */,
 				C74B66B42AF1661000F8A72D /* Products */,
@@ -56,7 +72,10 @@
 			children = (
 				C74B66B92AF1661100F8A72D /* Assets.xcassets */,
 				01AC15902B23B6F700920888 /* AppDelegate.swift */,
+				A10000022B90000100E54231 /* MediaRemoteService.swift */,
 				01AC15922B23C7FA00920888 /* MainMenu.xib */,
+				A10000002B90000100E54231 /* MusicPlayerPreset.swift */,
+				A10000062B90000100E54231 /* StatusItemController.swift */,
 				01706C972B24EC0D00E54231 /* ViewController.swift */,
 			);
 			path = AntiMusic;
@@ -134,6 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				01AC15912B23B6F700920888 /* AppDelegate.swift in Sources */,
+				A10000032B90000100E54231 /* MediaRemoteService.swift in Sources */,
+				A10000012B90000100E54231 /* MusicPlayerPreset.swift in Sources */,
+				A10000072B90000100E54231 /* StatusItemController.swift in Sources */,
 				01706C982B24EC0D00E54231 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,7 +200,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -239,7 +261,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -258,18 +280,18 @@
 		};
 		C74B66C42AF1661100F8A72D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B2C3D4E5F607182930A001 /* Version.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = AntiMusic;
 				INFOPLIST_KEY_LSUIElement = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "版权所有 2023 nift4";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -277,7 +299,6 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.nift4.AntiMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -288,18 +309,18 @@
 		};
 		C74B66C52AF1661100F8A72D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B2C3D4E5F607182930A001 /* Version.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = AntiMusic;
 				INFOPLIST_KEY_LSUIElement = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "版权所有 2023 nift4";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -307,7 +328,6 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.nift4.AntiMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

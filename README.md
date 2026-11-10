@@ -6,6 +6,17 @@ AntiMusic allows you to change the music player used by "Media keys" and "Now Pl
 
 Download, extract and move the .app to `/Applications`, then open it. It adds itself to auto-start automatically. To open the app settings, just open the app while it's already running. To quit the app, open the app settings, then press on the app name and quit in the menu bar - or press Cmd-Q.
 
+## 打包 DMG
+
+版本号唯一源：`Config/Version.xcconfig`（`make version-bump` / `./scripts/bump-version.sh`）。
+
+```bash
+make build-mac                      # 或 ./scripts/package-dmg.sh
+./scripts/package-dmg.sh            # installers/AntiMusic-<VERSION>-universal.dmg
+./scripts/package-dmg.sh arm        # installers/AntiMusic-<VERSION>-arm.dmg
+./scripts/package-dmg.sh intel      # installers/AntiMusic-<VERSION>-intel.dmg
+```
+
 ## Features
 
 - Change music player app used by Control Center "Now Playing" widget.
